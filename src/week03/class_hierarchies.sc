@@ -1,7 +1,9 @@
+package week03.hierarchies
+
 // ABSTRACT CLASSES
 
-val t1 = new NonEmpty(3, new Empty, new Empty)
-val t2 = t1 incl 4
+// val t1 = new NonEmpty(3, new Empty, new Empty)
+// val t2 = t1 incl 4
 
 // an abstract class can contain members that are missing an implementation -
 // for example, (incl and contains) in the following:
@@ -69,11 +71,11 @@ class NonEmpty(elem: Int, left: IntSet, right: IntSet) extends IntSet {
 
 // if an instance of an abstract class only needs to exist once, it can be implemented as a
 // SINGLETON OBJECT using "object" rather than "class". This is the case with the empty IntSet:
-
+/*
 object Empty extends IntSet {
   def contains(x: Int): Boolean = false
   def incl(x: Int): IntSet = new NonEmpty(x, Empty, Empty)
-}
+}*/
 
 // note in the last line - singleton objects are values, so there's no evaluation that needs to be performed.
 
