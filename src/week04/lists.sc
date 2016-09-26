@@ -35,3 +35,13 @@ Nil.::(4).::(3).::(2).::(1)
 // List() // same as Nil
 // List(2 :: xs) // a list that contains as only element another list that starts with 2
 
+// insertion sort with lists
+def isort(xs: List[Int]): List[Int] = xs match {
+  case List() => List()
+  case y :: ys => insert(y, isort(ys))
+}
+
+def insert(x: Int, xs: List[Int]): List[Int] = xs match {
+  case List() => x :: Nil
+  case y :: ys => if(x <= y) x :: xs else y :: insert(x, ys)
+}
