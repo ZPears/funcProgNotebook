@@ -29,3 +29,5 @@ case class Tuple2[T1, T2](_1: +T1, _2: +T2) {
 // example of msort
 val nums = List(2, -4, 5, 7, 1, 3, -6, 6, 8, 4)
 msort(nums)
+
+Tuple2("yes", 2)
